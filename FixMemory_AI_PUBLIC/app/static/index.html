@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FixMemory AI</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <p>Sibyl Labs Hackathon</p>
+        <h1>FixMemory AI</h1>
+        <span>Debugging agent with load-bearing persistent repair memory.</span>
+      </div>
+      <dl id="status">
+        <dt>SIBYL_MEMORY</dt><dd>CHECKING</dd>
+        <dt>BACKEND</dt><dd>CHECKING</dd>
+      </dl>
+    </header>
+
+    <section class="demo-strip">
+      <div>
+        <p>Live Judging Workflow</p>
+        <h2 id="stage-title">SESSION 1</h2>
+        <span id="stage-note">Start with a fresh demo project id, diagnose the bug, and save the repair context to Sibyl.</span>
+      </div>
+      <div class="demo-actions">
+        <button id="new-demo" type="button">New Demo ID</button>
+        <button id="session-one" type="button">SESSION 1</button>
+        <button id="fresh-session" type="button">FRESH SESSION</button>
+        <button id="session-two" type="button">SESSION 2</button>
+      </div>
+    </section>
+
+    <section class="proof-row">
+      <div class="proof-card"><span>MEMORY SAVED</span><strong id="proof-saved">WAITING</strong></div>
+      <div class="proof-card"><span>FRESH SESSION</span><strong id="proof-fresh">WAITING</strong></div>
+      <div class="proof-card"><span>MEMORY RECALLED</span><strong id="proof-recalled">WAITING</strong></div>
+      <div class="proof-card"><span>DECISION CHANGED BY MEMORY</span><strong id="proof-changed">WAITING</strong></div>
+    </section>
+
+    <section class="grid">
+      <section class="panel">
+        <h2>New Repair</h2>
+        <label>PROJECT_ID<input id="project-id" value="demo-python-app"></label>
+        <label>PROJECT_PATH<input id="project-path" value="C:\Users\mahlc\OneDrive\Documents\New folder\FixMemory_AI\demo_projects\buggy_python_app"></label>
+        <label>PROBLEM<textarea id="problem">My Python app crashes when I launch it.</textarea></label>
+        <label>TRACEBACK / ERROR<textarea id="error-message">ModuleNotFoundError: No module named 'requests'</textarea></label>
+        <button id="run">Run FixMemory Workflow</button>
+      </section>
+
+      <section class="panel">
+        <h2>Memory Recall</h2>
+        <pre id="recall">WAITING</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Diagnosis</h2>
+        <pre id="diagnosis">WAITING</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Proposed Fix</h2>
+        <pre id="fix">WAITING</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Test Results</h2>
+        <pre id="tests">WAITING</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Past Fixes</h2>
+        <pre id="history">WAITING</pre>
+      </section>
+
+      <section class="panel wide">
+        <h2>Final Report</h2>
+        <pre id="report">WAITING</pre>
+      </section>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
